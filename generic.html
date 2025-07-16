@@ -57,6 +57,26 @@
 							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
 						</div>
 					</div>
+					<div class="glide">
+
+					<div data-glide-el="track" class="glide__track">
+						<ul class="glide__slides">
+						<li class="glide__slide">Slide 1</li>
+						<li class="glide__slide">Slide 2</li>
+						<li class="glide__slide">Slide 3</li>
+						</ul>
+					</div>
+					</div>
+
+					<!-- Glide JS -->
+					<script src="./assets/js/glide.min.js"></script>
+					<script>
+					new Glide('.glide', {
+						type: 'carousel',
+						autoplay: 3000,
+						perView: 1
+					}).mount();
+					</script>
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -109,4 +129,11 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+
+	<!-- Required Core stylesheet -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css" />
+
+	<!-- Optional Theme stylesheet -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css" />
+
 </html>
