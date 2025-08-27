@@ -56,45 +56,90 @@
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">
-				<a href="index.html" class="button icon solid fa-arrow-left" style="margin-bottom: 1em;">
-					Κεντρικη
+				<h1 lang="el">ΔΙΕΘΝΕΣ ΕΜΠΟΡΙΟ ΦΥΣΙΚΩΝ ΠΟΡΩΝ & ΑΓΡΟΤΙΚΩΝ ΠΡΟΪΟΝΤΩΝ</h1>
+				<h1 lang="en">INTERNATIONAL TRADE OF NATURAL RESOURCES & AGRICULTURAL PRODUCTS</h1>
+
+				<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1em;">
+					<!-- Left: Index button -->
+					<div>
+						<a href="index.html" class="button icon solid fa-arrow-left" lang="el">Κεντρική</a>
+						<a href="index.html" class="button icon solid fa-arrow-left" lang="en">Home</a>
+					</div>
+
+					<!-- Right: Language buttons -->
+					<div>
+						<button type="button" onclick="showLang('el')">Ελληνικά</button>
+						<button type="button" onclick="showLang('en')">English</button>
+					</div>
+				</div>
+
+				<script>
+					function showLang(lang) {
+						// μόνο τα στοιχεία μέσα στο #main που έχουν attribute lang θα επηρεαστούν
+						document.querySelectorAll('#main [lang]').forEach(el => {
+							if (el.getAttribute('lang') === lang) {
+								el.style.display = '';
+							} else {
+								el.style.display = 'none';
+							}
+						});
+					}
+
+					document.addEventListener('DOMContentLoaded', function () {
+						// εμφάνιση Ελληνικών κατά την φόρτωση
+						showLang('el');
+					});
+				</script>
 				</a>
-					
-					<h1>Διεθνές Εμπόριο Φυσικών Πόρων & Αγροτικών Προϊόντων</h1>
-					<img src="images/ship-7210281_1280.jpg" alt="" />
-				<p>
-					Αναλαμβάνουμε την εισαγωγή και εξαγωγή ποιοτικών προϊόντων με εξειδίκευση σε αγροτικά αγαθά και
-					φυσικά υλικά. Προσφέρουμε:
+
+				<img src="images/ship-7210281_1280.jpg" alt="" />
+				<h1 lang="el">Η ΔΙΕΘΝΗΣ ΑΓΟΡΑ</h1>
+				<h1 lang="en" style="display:none;">THE INTERNATIONAL MARKET</h1>
+
+				<p lang="el">
+					Η αγορά και πώληση μεγάλων ποσοτήτων προϊόντων — όπως λιπάσματα, ζάχαρη, έλαια, μέταλλα, καύσιμα και
+					πολλά άλλα — έχει πλέον επιβαρυνθεί από χιλιάδες απατεώνες που, με διάφορες μεθόδους, προσπαθούν να
+					εξαπατήσουν αγοραστές και πωλητές. Ταυτόχρονα, πλήθος μεσαζόντων περιπλέκουν τις διαδικασίες του
+					διεθνούς εμπορίου, προκαλώντας καθυστερήσεις και σύγχυση.
 				</p>
+				<p lang="en" style="display:none;">
+					The global trade of large-volume commodities — such as fertilizers, sugar, oils, metals, fuels, and
+					many others — is increasingly affected by thousands of fraudsters who, through various tactics,
+					attempt to deceive both buyers and sellers. At the same time, countless intermediaries complicate
+					and confuse international trade processes.
+				</p>
+
+				<h2 lang="el">Τι Αντιπροσωπεύουμε Εμείς;</h2>
+				<h2 lang="en" style="display:none;">Who Are We?</h2>
+
+				<p lang="el">
+					Με 50 χρόνια εμπειρίας στον χώρο του διεθνούς εμπορίου — σε τομείς όπως τα μέταλλα, τα λιπάσματα, η
+					ζάχαρη, τα καύσιμα και άλλα προϊόντα — διαθέτουμε ένα εκτεταμένο δίκτυο επαφών με αξιόπιστους
+					συνεργάτες και μεγάλα εργοστάσια παραγωγής.
+				</p>
+				<p lang="en" style="display:none;">
+					With 50 years of experience in international trade — in sectors such as metals, fertilizers, sugar,
+					fuels, and more — we have built an extensive network of trusted contacts and direct connections with
+					major manufacturing plants.
+				</p>
+
+				<p lang="el">
+					Μπορούμε να αναλάβουμε:
 				<ul>
-					<li><strong>Λιπάσματα</strong>, <strong>ζάχαρη</strong>, <strong>ελαιόλαδα</strong>,
-						<strong>μέταλλα</strong>, καθώς και <strong>ποικιλία αγροτικών προϊόντων</strong>, επιλεγμένα
-						από πιστοποιημένες και αξιόπιστες πηγές.
-					</li>
-					<li><strong>Μάρμαρα</strong>, <strong>γρανίτες</strong>, <strong>όνυχες</strong> και άλλα πετρώματα
-						— διατίθενται <strong>κατόπιν παραγγελίας</strong> και αποστέλλονται
-						<strong>παγκοσμίως</strong>, με μέριμνα για την ασφαλή μεταφορά και την ακρίβεια των διαστάσεων.
-						<ul>
-							<li>Ιδιαίτερη έμφαση δίνουμε στο <strong>χιονόλευκο μάρμαρο Θάσου</strong> και στο
-								<strong>μάρμαρο Βώλακα</strong>, λευκό σαν γάλα με εντυπωσιακά γκρι νερά — ιδανικά για
-								απαιτητικά έργα υψηλής αισθητικής.
-							</li>
-						</ul>
-					</li>
+					<li>Τη διεκπεραίωση τριγωνικών συναλλαγών</li>
+					<li>Τη διαμεσολάβηση ως αντιπρόσωποι σε αγοραπωλησίες</li>
+					<li>Ξεπερνάμε κάθε εμπόδιο, γιατί γνωρίζουμε ότι δεν υπάρχουν προβλήματα χωρίς λύσεις.</li>
 				</ul>
-				<p>
-					Επιπλέον, προσφέρουμε μοναδικά <strong>χειροποίητα καλλιτεχνήματα</strong>, όπως:
 				</p>
+				<p lang="en" style="display:none;">
+					We are able to handle:
 				<ul>
-					<li>Ψηφιδωτά από φυσικές πέτρες</li>
-					<li>Διακοσμητικά και χρηστικά αντικείμενα</li>
-					<li>Πορτρέτα και εικόνες σε μάρμαρο, κατασκευασμένα με προσοχή στη λεπτομέρεια και σεβασμό στην
-						παραδοσιακή τέχνη</li>
+					<li>Execution of triangular transactions</li>
+					<li>Representation and facilitation of buying and selling activities</li>
+					<li>We overcome any obstacles — because we know that every problem has a solution.</li>
 				</ul>
-				<p>
-					Με στόχο τη συνέπεια, την ποιότητα και την εξυπηρέτηση σε κάθε συνεργασία, ανταποκρινόμαστε στις
-					ανάγκες επαγγελματιών και ιδιωτών σε όλο τον κόσμο.
 				</p>
+
 			</div>
 		</div>
 
@@ -105,7 +150,7 @@
 			new Glide('.glide', {
 				type: 'carousel',
 				autoplay: 2000,
-				perView: 4
+				perView: 1
 			}).mount();
 		</script>
 

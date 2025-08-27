@@ -72,6 +72,16 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Make all carousel images rectangular with smooth edges */
+.glide__slide .rectangular-image img,
+.glide__slides .rectangular-image img {
+    width: 100%;          /* fill the span */
+    height: 300px;        /* adjust to your desired height */
+    object-fit: cover;    /* crop/scale to fill nicely */
+    border-radius: 8px;   /* smooth edges */
+    display: block;       /* remove inline spacing */
+}
+
 /* Basic */
 
 	@-ms-viewport {

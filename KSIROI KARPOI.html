@@ -55,38 +55,175 @@
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">
-				<a href="index.html" class="button icon solid fa-arrow-left" style="margin-bottom: 1em;">
-					Κεντρικη
-				</a>
-				<h1>ΞΥΡΟΙ ΚΑΡΠΟΙ</h1>
+				<h1 lang="el">ΞΥΡΟΙ ΚΑΡΠΟΙ</h1>
+				<h1 lang="en">NUTS</h1>
+
+				<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1em;">
+					<!-- Left: Index button -->
+					<div>
+						<a href="index.html" class="button icon solid fa-arrow-left" lang="el">Κεντρική</a>
+						<a href="index.html" class="button icon solid fa-arrow-left" lang="en">Home</a>
+					</div>
+
+					<!-- Right: Language buttons -->
+					<div>
+						<button type="button" onclick="showLang('el')">Ελληνικά</button>
+						<button type="button" onclick="showLang('en')">English</button>
+					</div>
+				</div>
+
+				<script>
+					function showLang(lang) {
+						// μόνο τα στοιχεία μέσα στο #main που έχουν attribute lang θα επηρεαστούν
+						document.querySelectorAll('#main [lang]').forEach(el => {
+							if (el.getAttribute('lang') === lang) {
+								el.style.display = '';
+							} else {
+								el.style.display = 'none';
+							}
+						});
+					}
+
+					document.addEventListener('DOMContentLoaded', function () {
+						// εμφάνιση Ελληνικών κατά την φόρτωση
+						showLang('el');
+					});
+				</script>
+
 				<div class="glide">
 					<div data-glide-el="track" class="glide__track">
 						<ul class="glide__slides">
-							<span class="rectangular-image"><img src="https://www.emedi.gr/wp-content/uploads/2013/11/%CE%B1%CE%BC%CF%8D%CE%B3%CE%B4%CE%B1%CE%BB%CE%B12-2.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="data:image/jpeg;base64,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" alt="" /></span>
-							<span class="rectangular-image"><img src="images/KSIROI KARPOI/img1.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/KSIROI KARPOI/img2.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/KSIROI KARPOI/img4.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KSIROI KARPOI/1- ΧΡΩΜΑΤΙΣΜΟΙ.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KSIROI KARPOI/1.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KSIROI KARPOI/2 αμυγδαλα-ωμα-ελλαδος-φυρανια.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KSIROI KARPOI/2- ΠΕΤΑΛΟΥΔΑ LIGHT- ΛΕΥΚΌ.png" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KSIROI KARPOI/2.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KSIROI KARPOI/2αΛΕΥΚΌ.webp" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KSIROI KARPOI/3- ΤΈΤΑΡΤΑ- LIGHT- ΛΕΥΚΌ.png" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KSIROI KARPOI/3.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KSIROI KARPOI/4- ΑΝΟΙΧΤΟ ΚΕΧΡΙΜΠΑΡΕΝΙΟ.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KSIROI KARPOI/5- ΣΚΟΎΡΟ ΚΕΧΡΙΜ[ΑΡΕΝΙΟ.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KSIROI KARPOI/6- ΜΕ ΚΕΛΥΦΟΣ.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KSIROI KARPOI/7- ΜΕ ΚΈΛΥΦΟΣ.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KSIROI KARPOI/8- ΜΕ ΚΈΛΥΦΟΣ.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KSIROI KARPOI/TEXAS 2.png" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KSIROI KARPOI/Αμύγδαλο-γυράνια-ωμό-Ελληνικό.jpg" alt="" /></span>
 						</ul>
 					</div>
 				</div>
-				<p>Προσφέρουμε φρέσκους και ποιοτικούς ξηρούς καρπούς, όπως αμύγδαλα, καρύδια και φουντούκια, ιδανικούς για υγιεινό σνακ και μαγείρεμα, με άμεση διαθεσιμότητα και ανταγωνιστικές τιμές.</div>
-		</div>
+				<br>
+				<ul>
+					<!-- ΑΜΥΓΔΑΛΑ -->
+					<li id="almonds">
+						<section>
+							<h2 lang="el">ΑΜΥΓΔΑΛΑ – ΠΟΙΚΙΛΙΕΣ ΤΕΞΑΣ &amp; ΦΥΡΑΝΙΑ</h2>
+							<p lang="el">Τα αμύγδαλα που προσφέρουμε είναι ελληνικής παραγωγής, προερχόμενα κυρίως από
+								τις περιοχές των Σερρών, του Βόλου και της Λάρισας.</p>
+							<p lang="el">Οι κύριες ποικιλίες είναι:</p>
+							<ul>
+								<li lang="el"><strong>Τέξας:</strong> Χρησιμοποιείται κυρίως σε εργαστήρια
+									ζαχαροπλαστικής.</li>
+								<li lang="el"><strong>Φυρανιά:</strong> Μεγαλύτερου μεγέθους, ιδανική για επεξεργασία σε
+									εργαστήρια ξηρών καρπών.</li>
+							</ul>
+
+							<h2 lang="en">ALMONDS – TEXAS &amp; FYRANIA VARIETIES</h2>
+							<p lang="en">The almonds we offer are of Greek origin, mainly sourced from the regions of
+								Serres, Volos, and Larissa.</p>
+							<p lang="en">The main varieties are:</p>
+							<ul>
+								<li lang="en"><strong>Texas:</strong> Primarily used in pastry and confectionery
+									workshops.</li>
+								<li lang="en"><strong>Fyrania:</strong> Larger in size, ideal for processing in nut and
+									snack production facilities.</li>
+							</ul>
+						</section>
+					</li>
+
+					<!-- ΚΑΡΥΔΙΑ ΜΕ ΚΕΛΥΦΟΣ -->
+					<li id="walnuts-shell">
+						<section>
+							<h2 lang="el">ΚΑΡΥΔΙΑ ΜΕ ΚΕΛΥΦΟΣ</h2>
+							<p lang="el">Τα καρύδια με κέλυφος μπορεί να είναι είτε πλυμένα είτε άπλυτα, ανάλογα με τις
+								συνθήκες συγκομιδής. Διαχωρίζονται σε δύο μεγέθη:</p>
+							<ul>
+								<li lang="el">28–30 χιλιοστά</li>
+								<li lang="el">31–35 χιλιοστά (το οποίο είναι ελαφρώς ακριβότερο)</li>
+							</ul>
+							<p lang="el">Περνούν από διαδικασία διαλογής ώστε να αφαιρεθούν τα σκούρα ή αλλοιωμένα
+								καρύδια. Τα ποιοτικά καρύδια συσκευάζονται σε δικτυωτά σακιά και εισάγονται από την
+								Ουκρανία στην Ελλάδα.</p>
+							<p lang="el">Τα καρύδια Ουκρανίας είναι φυσικά προϊόντα, μεγαλωμένα σε δασικές και
+								ημιδασικές περιοχές των κάμπων, χωρίς τη χρήση λιπασμάτων ή φυτοφαρμάκων.</p>
+
+							<h2 lang="en">WALNUTS IN SHELL</h2>
+							<p lang="en">Our in-shell walnuts may be either washed or unwashed, depending on the
+								harvesting conditions. They are available in two size categories:</p>
+							<ul>
+								<li lang="en">28–30 mm</li>
+								<li lang="en">31–35 mm (slightly more expensive)</li>
+							</ul>
+							<p lang="en">All walnuts go through a sorting process to remove dark or damaged ones. The
+								selected high-quality walnuts are packed in mesh sacks and imported from Ukraine to
+								Greece.</p>
+							<p lang="en">Ukrainian walnuts are natural products, grown in forested and semi-forested
+								areas of the plains. They are cultivated without the use of fertilizers or chemicals.
+							</p>
+						</section>
+					</li>
+
+					<!-- ΚΑΡΥΔΟΨΙΧΑ -->
+					<li id="walnut-kernels">
+						<section>
+							<h2 lang="el">ΚΑΡΥΔΟΨΙΧΑ</h2>
+							<p lang="el">Διατίθενται οι εξής κατηγορίες:</p>
+							<ul>
+								<li lang="el">1/2 (Πεταλούδες), λευκή – επιτρέπεται έως 10% μικρότερων διαστάσεων.</li>
+								<li lang="el">1/4, λευκή – επιτρέπεται έως 10% μικρότερων διαστάσεων.</li>
+								<li lang="el">1/8, λευκή – επιτρέπεται έως 10% μικρότερων διαστάσεων.</li>
+							</ul>
+							<p lang="el">Για κάθε ένα από τα παραπάνω μεγέθη, υπάρχουν δύο επιπλέον ποιοτικές
+								κατηγορίες:</p>
+							<ul>
+								<li lang="el">Ανοιχτό κεχριμπαρένιο</li>
+								<li lang="el">Σκούρο κεχριμπαρένιο</li>
+							</ul>
+							<p lang="el">Οι συγκεκριμένες κατηγορίες διατίθενται σε χαμηλότερες τιμές. Οι πεταλούδες
+								(1/2) πωλούνται ξεχωριστά, ενώ τα τέταρτα (1/4) και όγδοα (1/8) προσφέρονται μαζί.</p>
+
+							<h2 lang="en">WALNUT KERNELS</h2>
+							<p lang="en">The following categories are available:</p>
+							<ul>
+								<li lang="en">1/2 (Halves), white – up to 10% of smaller pieces allowed</li>
+								<li lang="en">1/4, white – up to 10% of smaller pieces allowed</li>
+								<li lang="en">1/8, white – up to 10% of smaller pieces allowed</li>
+							</ul>
+							<p lang="en">Each of the above sizes is also available in two additional quality grades:</p>
+							<ul>
+								<li lang="en">Light amber</li>
+								<li lang="en">Dark amber</li>
+							</ul>
+							<p lang="en">These grades are offered at lower prices. The halves are sold separately, while
+								quarters and eighths are typically offered mixed.</p>
+						</section>
+					</li>
+				</ul>
+			</div>
 
 
 
-		<!-- Glide JS -->
-		<script src="./assets/js/glide.min.js"></script>
-		<script>
-			new Glide('.glide', {
-				type: 'carousel',
-				autoplay: 2000,
-				perView: 4
-			}).mount();
-		</script>
+			<!-- Glide JS -->
+			<script src="./assets/js/glide.min.js"></script>
+			<script>
+				new Glide('.glide', {
+					type: 'carousel',
+					autoplay: 2000,
+					perView: 4
+				}).mount();
+			</script>
 
-		<!-- Footer -->
-		<!-- <footer id="footer">
+			<!-- Footer -->
+			<!-- <footer id="footer">
 						<div class="inner">
 							<section>
 								<h2>Get in touch</h2>
@@ -126,14 +263,14 @@
 						</div>
 					</footer> -->
 
-	</div>
+		</div>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 </body>
 

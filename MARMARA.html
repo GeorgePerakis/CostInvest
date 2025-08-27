@@ -54,38 +54,256 @@
 
 		<!-- Main -->
 		<div id="main">
+
 			<div class="inner">
-				<a href="index.html" class="button icon solid fa-arrow-left" style="margin-bottom: 1em;">
-					Κεντρικη
-				</a>
-				<h1>MAΡΜΑΡΑ</h1>
+				<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1em;">
+					<!-- Left: Index button -->
+					<div>
+						<a href="index.html" class="button icon solid fa-arrow-left" lang="el">Κεντρική</a>
+						<a href="index.html" class="button icon solid fa-arrow-left" lang="en">Home</a>
+					</div>
+
+					<!-- Right: Language buttons -->
+					<div>
+						<button type="button" onclick="showLang('el')">Ελληνικά</button>
+						<button type="button" onclick="showLang('en')">English</button>
+					</div>
+				</div>
+
+				<h1 lang="el">ΜΑΡΜΑΡΑ ΕΡΓΑΣΙΕΣ</h1>
+				<h1 lang="en">MARBLE WORKS</h1>
+				<script>
+					function showLang(lang) {
+						// μόνο τα στοιχεία μέσα στο #main που έχουν attribute lang θα επηρεαστούν
+						document.querySelectorAll('#main [lang]').forEach(el => {
+							if (el.getAttribute('lang') === lang) {
+								el.style.display = '';
+							} else {
+								el.style.display = 'none';
+							}
+						});
+					}
+
+					document.addEventListener('DOMContentLoaded', function () {
+						// εμφάνιση Ελληνικών κατά την φόρτωση
+						showLang('el');
+					});
+				</script>
 				<div class="glide">
 					<div data-glide-el="track" class="glide__track">
 						<ul class="glide__slides">
-							<span class="rectangular-image"><img src="images/MARMARA/img1.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/MARMARA/img2.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/MARMARA/img3.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/MARMARA/img5.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/MARMARA/img6.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/MARMARA/img8.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/MARMARA/img9.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/MARMARA/img10.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/MARMARA/img11.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/MARMARA/img12.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/KATASKEYES/img1.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/KATASKEYES/img2.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/KATASKEYES/img3.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/KATASKEYES/img4.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/KATASKEYES/img5.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/KATASKEYES/img6.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/KATASKEYES/img7.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/KATASKEYES/img8.jpg" alt="" /></span>
-							<span class="rectangular-image"><img src="images/KATASKEYES/img9.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/1- 0-02-05-2a69bff9b42258d9f748d4f37f1135124cdf4891dee737ff2d9b3daf6b624870_4ff7d9ff43565fdb.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/10 0-02-05-37ea1ef74db0fcc69e74e6705b9e310bd282a51f1bcd6c7f96da237c73457e12_4f8dc59d06b5141c.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/11- 0-02-05-231a109573f4bc3471cc143b2cdf0e79178061fc1c98088a2367cbdd7b64a86d_f91c69a90c9a6f04.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/12- 0-02-05-0912991c277815f481240162cb4ae6966b0b3157b62cd8c5e832ff5f351975eb_f718000dd1f48623.png" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/13- 0-02-05-3f4e16be58881348f0308cbec23c623a083db992f3fd2534674b22b1c1891bc4_eba086a490a95eb8.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/14- 0-02-05-f5c95e4996d7fb238575397bac2f8ea4b2d5fd9f69b6afef270585d390d4756e_6f62ed996a21a317.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/15- 0-02-05-1266b54254f12d38a7901ea973e7c645d6821837b6749a0b208745165c4fe898_8da2bc0312452d2d.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/16- 0-02-05-0a1b7349f2294c9956c42b40040cfae55349cdf128ad7c445b23b30472d07d78_b8c87a7aa5d61be.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/17- 0-02-05-66e14593ad6e2111b9ac21ba8ff1f90a0af741d697dae660c40f2a699779c43d_2280f5bbe311d0dd.png" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/18- 0-02-05-4613b64e48cbe2519573b7b52c9a7e4474e811d10342d006f13ca5a618393648_526df2898e554c4d.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/19- 0-02-05-a6b7d27c57931b6d8c4d348d3c68f767ae577777d088d431a0b67bb77c435f2a_c22cbc8728f9a483.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/2- 0-02-05-3f48969be56b9cd08121c6df00a754e231596a6e6aac4b818a9ae4e39d5a010a_7e05e9f2e39d3430.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/22- 0-02-05-14a9bd2f414e01f54f8ada16e0e80d6dfeb13e341cc00558b4d9a5b00af8b2de_b224f15a0f5ef42a.png" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/23- 0-02-05-4d47c62853b39321b88b33b0d75f7105a3e2017271b3e496f04fc2c5115ca6c4_67099fb49121c95a.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/24- 0-02-05-f3ce0f9ee20052f51fe44f8b81cb6f4470d43f26c67ea69680e3b618678f793a_ae93622f20cff916.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/25- 0-02-05-3287cd413d4e5e11f468b1898a0446b875e4cdf00ac0eae445a4c61a34520296_e899279fe19752f5.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/27- 0-02-05-fc1bd56b1bb8de0a09683ef2761d91aac7591e55ddae2d9a3e1be5f121cda0c8_4d9562934fce9773.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/28- 0-02-05-2dc30f95e836aacaf62d6313006b70e5d20fd0ab68468ba53c9b1c1186e67bac_a7f19a7dda832a9c.png" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/3- 0-02-05-7173b86aff19b593391a9790f3dddd54ecd91b6430c92ae14de23f0717914039_1fcd2594b59c77b0.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/4- 0-02-05-a6e53129fd04573479fb314fece833426e5d4f579da19068b9988845e23f78f0_ce95ee0cc9e381a3.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/5- 0-02-05-b5cea1cce086a7766c1c4db1ae6739af5a3a67e475fb1edfa6c322ea6c333219_e6e462c2f1d57341.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/6- 0-02-05-6d66d51e7ec6e9907115f1ea92317c0afecdf80127c93a2475862a5180ef4cca_3c762af9a26e4415.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/7- 0-02-05-f8e6d9eb6c140b53bad6a57890cb8bdf1f87a70b10cb2c92d84bc9064a4e3f0c_62b93f635085effe.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/8- 0-02-05-5dcde68e01062a9e581f720f013cab723c2327bcf194d1bb1504a9be8aa15cb5_4e4c08143aa79851.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/9- 0-02-05-6bb4e1ddc8067a652026c01a91bb3e5ebdacd8774825fd55b0f0bffee3662be2_be543c1b9f5b19b4.jpg" alt="" /></span>
 						</ul>
 					</div>
 				</div>
 				<br>
-				<p>Προσφέρουμε υψηλής ποιότητας μάρμαρα για όλες τις ανάγκες σας, από δάπεδα και τοίχους μέχρι επενδύσεις και διακοσμητικά στοιχεία. Τα μάρμαρά μας ξεχωρίζουν για την ανθεκτικότητα, την αισθητική και την ποικιλία χρωμάτων και υφών. Ιδανικά για κατοικίες, επαγγελματικούς χώρους και έργα μεγάλης κλίμακας, εξασφαλίζουν κομψότητα και διαχρονικότητα σε κάθε εφαρμογή.</div>
+				<h1 lang="el">ΚΑΛΛΙΤΕΧΝΙΜΑΤΑ</h1>
+				<h1 lang="en">ART WORK</h1>
+
+				<div class="glide2">
+					<div data-glide-el="track" class="glide__track">
+						<ul class="glide__slides">
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/1-0-02-05-4cb49affdf0078c0e91840b2f678bfb259e957479c6c39cf3a0615ba49be062a_fa19d5efd393ac10.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/10- 0-02-05-37f09cb4b0ada6688f1e777f3c8f2101eefb602ad422cb928f05545e9389e5da_5b3638f951c4dd3b.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/11- 0-02-05-52cdcc3310c68cad90728b114170a4bb77816d9fbe8f5201603c25b2ccc8e417_64be0c07b1d1d2c3.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/12- 0-02-05-60c972a25384e25d7cc8e2068570cd799f4a1a06400bddd0946bb9c1dfc9d957_54b7a59bec1e21b1.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/13- 0-02-05-8455c9e400e2d67977d5fd89c024ba76d86969049716359142cb693fbbcc6ecd_31755516d0984ece.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/14- 0-02-05-338389433991f0a98eb525b87f74db9f3a9a06b990db4dfb40591a17093fb1ef_56ddff18721418e4.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/15- 0-02-05-53ef07add88743368dc5eb52bd3548ec5ced161e21bef7447d52dea5d78a10ef_11d09aafeae49718.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/16- 0-02-05-4994e47e52a938e5f0d709330e6abcf7c3300c824a9a149878b328a1ff451ac4_dd2f01c8996ac1fe.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/16- 0-02-05-664cbd970a82781bce431cd35e1e194ad25f9c3f6c567c1e920a62ae4677f5e6_45532a908cdf88f2.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/17- 0-02-05-f686b746688d90c79b1eee815524bee89fb0afa3c60e00fa6caf7c27d749b618_2fa0e521c3a27d1a.png" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/18- 0-02-05-e162167b5bbdde7b25700d5fcb6fbb4b8137461e6c19be432077404c731c1a55_17d78905e08a49ab.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/19- 0-02-05-0b307757ef113b438516deecb1e7e20b1c5a8ceb11153b1bac283daf89413bfe_5e3469863f52a8b6.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/2-0-02-05-7bb39c72fef05535058f4758140ab1d0b801da1988637fe630db63d27fac6182_d2fdd28ebfdff5af.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/20- 0-02-05-2415c2354f4cb272e65c6b4c43a3881ba458fb0a554b030b7dd399958f7c3ba5_fb0e7591a749ee81.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/21- 0-02-05-6c538cc64628cd45a65a60545aa995d1df0e9051e9be0cfc532451d391044ae2_354ccda6432b38a1.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/22- 0-02-05-b6b9324e627b3c148f2b1ab431c9ca47904d177be9a6218bbe059e73783bbf86_25c96bc28e73b06b.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/23- 0-02-05-1c361426181723d16a2988012409a541e795cff84c31039bc4691f504f9373cc_af84dc49baf92fb4.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/24- 0-02-05-6d49370e2e0c976abc81384ba5245f382939c0b4de89c114af05743ec0575c25_9c221d8d23c8a41c.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/25- 0-02-05-61ade3b79aab4a36b3583d420872df9497b3aad570f0b8aa5165cf4ffa83798f_b5ebc4d8a1ef373.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/26- 0-02-05-c758dc895958f308dd07e1d4eb1233adc78fa33d34261fbbddbc55cd8dc4c3c6_340f238d0b53521e.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/27- 0-02-05-bb3c547fad7607ec86d98806b827aa4b608e8d24d0ede4cde9ad9b2878949f27_47d4fd8d81ce1f9e.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/28- 0-02-05-037cd3cf5195e3a841ebd320d015ea31511c7e469173e21add5fb7540500ece3_5e64e0b532540bb.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/29- 0-02-05-c56774015349d15b59e1e8f5e85120731ab8a3d297fcadc4868e7255b4e3ed39_ddeeb20bf9c71d88.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/3-0-02-05-7c411874ff87a9e7e255abf752ecba6089353ee4c510be22cca7aa1228d23445_d4d5f56acb064efd.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/31- 0-02-05-7e068b51abbb55cac9f1e50e9fe02e23767f01ba68096f72379ff70a119ce1a6_ef50315136d58e83.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/31- 0-02-05-7e068b51abbb55cac9f1e50e9fe02e23767f01ba68096f72379ff70a119ce1a6_ef50315136d58e83.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/4- 0-02-05-ce375c192f098e562118bc8dda668b876f2c5cc0479108e7df44af67d7bdddcc_be40e50066dcab4b.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/5- 0-02-05-ae968c3e5cba3bef92c780333a1a71a04283550966f59615334ccdd661919517_d9ce0962b1fbe644.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/6- 0-02-05-baad6dd39b51a217c809ffa3d7e3e6995f1d3d931f11758ae2a24a3e15f211aa_7722d28d4c4b4de4.png" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/7- 0-02-05-e29fe9cd15b7b8aa989befafc971a7e9e63dd0f11bf358be965b2a6ff4d48c3e_b9b1a0e8fd768664.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/8- 0-02-05-227a982439cbaa67440f138ae8291c4a5f25eba68087b9f33c5bbc258e4fe839_64c638abbec380ab.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/KALLITEXNIMATA/9- 0-02-05-f119837bee379166cbf31604869fae375b105fd314db4f02e6bf031588c4ff97_aa675ebb5a0f4068.jpg" alt="" /></span>
+							
+						</ul>
+					</div>
+				</div>
+				<br>
+				<h1 lang="el">ΨΗΦΙΔΩΤΑ</h1>
+				<h1 lang="en">MOSAICS</h1>
+
+				<div class="glide3">
+					<div data-glide-el="track" class="glide__track">
+						<ul class="glide__slides">
+							<span class="rectangular-image"><img src="images/ΨΗΦΙΔΩΤΑ/1- 0-02-05-4a54efbe56f71eff394e7499c441ef65405c6d3ebaf75b788a4050686b5845a9_d71ceef417155529.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/ΨΗΦΙΔΩΤΑ/10- 0-02-05-a125bc8b50d6083998c5654b087f14a6a630e57e83e8dacdbb0d55bfa3341822_93677731049ea248.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/ΨΗΦΙΔΩΤΑ/11- 0-02-05-1e8a856cd68d5bcd22185f0ec30ba237c2a4e21ce17bb62c4534bfe0aa136757_b21a523e157be946.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/ΨΗΦΙΔΩΤΑ/12- 0-02-05-b655d262e4865ba97e848e1a10caa186bfde8af8e4f4373936a207ea6c6ab784_1223de9bf71e092d.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/ΨΗΦΙΔΩΤΑ/13- 0-02-05-93bc5c56c6c01bd1879570c199a17dabfafc8cb16c367b15c807d8a6b63b977c_b6d254634fe597b.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/ΨΗΦΙΔΩΤΑ/14- 0-02-05-554db1f3bb37e0ce0d072726ca0d9b32c693a38ad82ca87adeb64b346da97bfd_5157cb232779ff49.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/ΨΗΦΙΔΩΤΑ/2- 0-02-05-1328398a5fdfe0e3c7c10b41f2580ddf3cf16306da3a2c6fd181fc113d432f10_bd34240afe710147.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/ΨΗΦΙΔΩΤΑ/3- 0-02-05-ebc63e623b28a8cf780ac4731398a739a0e9d27feba5c190b016a30e8997c4fd_acc7a3c300b8c308.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/ΨΗΦΙΔΩΤΑ/4- 0-02-05-09a538da05accb19eb806981a334465774bca7c2eec35a1b7f3a85544fd37c43_d155bb3ce53126ae.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/ΨΗΦΙΔΩΤΑ/5- 0-02-05-fd8de0725313b6f84f9634a2cb45ada011ed6ce69ea953442299a5d2ac7a8822_b27d64c690875fb8.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/ΨΗΦΙΔΩΤΑ/6- 0-02-05-a7b5cedc73222676a1ed0df8b4d94cfd894527ec73f99ba3932ace2dd1ecfcea_b5743ed536145707.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/ΨΗΦΙΔΩΤΑ/7- 0-02-05-d968c5cf36fd7f59b0f0123fa908f4fa4e01d832839b9ad0e4a4eb124ce05557_694ca0e0624e444e.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/ΨΗΦΙΔΩΤΑ/8- 0-02-05-0ec28ad96b28ffd1c0baad8d19f36cac3a6bd26b4207d671e79f85a8199bd6ab_14afdd3ca8239c00.jpg" alt="" /></span>
+							<span class="rectangular-image"><img src="images/ΨΗΦΙΔΩΤΑ/9- 0-02-05-d245e3ee1e5f00e3f56a0fb54dd103ce0725f1032749d5b63b80e033ba78fcf8_4d81e110a1ebbbac.jpg" alt="" /></span>
+						</ul>
+					</div>
+				</div>
+				<br>
+				<h1 lang="el">ΓΡΑΝΙΤΕΣ</h1>
+				<h1 lang="en">GRANITES</h1>
+
+				<div class="glide4">
+					<div data-glide-el="track" class="glide__track">
+						<ul class="glide__slides">
+							<span class="rectangular-image"><img src="images/MARMARA/Εικόνα2.png" alt="" /></span>
+							<span class="rectangular-image"><img src="images/MARMARA/Εικόνα3.jpg" alt="" /></span>
+						</ul>
+					</div>
+				</div>
+				<br>
+				
+				<ul>
+					<li>
+						<h2 lang="el">ΜΑΡΜΑΡΑ ΥΨΗΛΗΣ ΠΟΙΟΤΗΤΑΣ</h2>
+						<p lang="el">Προσφέρουμε μάρμαρα υψηλής ποιότητας για κάθε σας ανάγκη — από δάπεδα και τοίχους
+							έως επενδύσεις και διακοσμητικά στοιχεία.<br>
+							Διαθέτουμε μεγάλη ποικιλία χρωμάτων και υφών, κατάλληλη για κατοικίες, επαγγελματικούς
+							χώρους, αλλά και έργα μεγάλης κλίμακας.<br>
+							Τα μάρμαρά μας προσδίδουν κομψότητα και διαχρονικότητα σε κάθε εφαρμογή.</p>
+
+						<h2 lang="en">PREMIUM-QUALITY MARBLE</h2>
+						<p lang="en">We offer premium-quality marble to meet all your needs — from flooring and wall
+							cladding to facades and decorative elements.<br>
+							Our collection includes a wide variety of colors and textures, ideal for homes, commercial
+							spaces, and large-scale projects.<br>
+							Our marble ensures elegance and timeless appeal in every application.</p>
+					</li>
+
+					<li>
+						<h2 lang="el">Διαθέσιμες Επιλογές Γρανιτών</h2>
+						<p lang="el">Οι γρανίτες μας διατίθενται σε διαφορετικές υφές φινιρίσματος, ανάλογα με τις
+							ανάγκες σας: <br>
+							✅ Γυαλισμένο<br>
+							✅ Φλογισμένο<br>
+							✅ Αμμοβολή</p>
+
+						<p lang="el"><strong>Ιδανική Χρήση:</strong><br>
+							Δάπεδα, σκάλες, περβάζια παραθύρων<br>
+							Εξωραϊσμός, πλακόστρωση<br>
+							Επένδυση πισίνας, πάγκοι<br>
+							Τάφοι και μνήματα</p>
+
+						<h2 lang="en">Available Granite Options</h2>
+						<p lang="en">Our granites are available in different finishing textures, depending on your
+							needs:<br>
+							✅ Polished<br>
+							✅ Flamed<br>
+							✅ Sandblasted</p>
+
+						<p lang="en"><strong>Ideal Use:</strong><br>
+							• Floors, stairs, window sills<br>
+							• Landscaping, paving<br>
+							• Pool cladding, countertops<br>
+							• Tombs and memorials</p>
+					</li>
+
+					<li>
+						<h2 lang="el">📦 Κοντέινερ</h2>
+						<p lang="el">Πάχος 20mm<br>
+							400 τ.μ., πάχος 20 mm → 30 €/τ.μ.<br>
+							💰 Συνολικό Κόστος: 12.000 € + ΦΠΑ</p>
+
+						<p lang="el">Πάχος 30mm<br>
+							300 τ.μ., πάχος 30 mm → 37 €/τ.μ.<br>
+							💰 Συνολικό Κόστος: 11.000 € + ΦΠΑ</p>
+
+						<p lang="el">Μεικτό<br>
+							200 τ.μ., πάχος 20 mm → 30 €/τ.μ. → Σύνολο: 6.000 €<br>
+							150 τ.μ., πάχος 30 mm → 37 €/τ.μ. → Σύνολο: 5.500 €<br>
+							💰 Συνολικό Κόστος: 11.550 € + ΦΠΑ</p>
+
+						<p lang="el">📌Υπάρχει δυνατότητα παραγγελίας οποιασδήποτε αναλογίας φορτίων – επικοινωνήστε
+							μαζί μας!</p>
+
+						<h2 lang="en">📦 Container Options</h2>
+						<p lang="en">1) Thickness 20mm<br>
+							• 400 m², thickness 20 mm → €30/m²<br>
+							💰 Total Cost: €12,000 + VAT</p>
+
+						<p lang="en">2) Thickness 30mm<br>
+							• 300 m², thickness 30 mm → €37/m²<br>
+							💰 Total Cost: €11,000 + VAT</p>
+
+						<p lang="en">3) Mixed<br>
+							• 200 m², thickness 20 mm → €30/m² → Total: €6,000<br>
+							• 150 m², thickness 30 mm → €37/m² → Total: €5,500<br>
+							💰 Total Cost: €11,550 + VAT</p>
+
+						<p lang="en">📌 It is possible to order any proportion of loads – contact us!</p>
+					</li>
+
+					<li>
+						<h2 lang="el">Διαστάσεις &amp; Επιλογές</h2>
+						<p lang="el">🔹 Πλάτος 600 mm x ελεύθερο μήκος<br>
+							🔹 Πλάτος 900 mm x ελεύθερο μήκος (+2 € ανά τ.μ.)<br>
+							🔹 Πλάτος 1200 mm x ελεύθερο μήκος (+4 € ανά τ.μ.)</p>
+
+						<p lang="el">📌 Υπάρχει δυνατότητα συμπλήρωσης φορτίου από 2-3 αγοραστές.<br>
+							📌 Χρόνος παράδοσης 3-4 εβδομάδες. Ο γρανίτης ετοιμάζεται κατόπιν παραγγελίας<br>
+							📌 Διαθέτουμε κατόπιν παραγγελίας και ΜΑΡΜΑΡΑ παντός τύπου<br>
+							Για περισσότερες πληροφορίες, επικοινωνήστε μαζί μας! 😊</p>
+
+						<h2 lang="en">Dimensions &amp; Options</h2>
+						<p lang="en">🔹 Width 600 mm × free length<br>
+							🔹 Width 900 mm × free length (+€2/m²)<br>
+							🔹 Width 1200 mm × free length (+€4/m²)</p>
+
+						<p lang="en">📌 Load can be combined from 2–3 buyers.<br>
+							📌 Delivery time: 3–4 weeks. Granite is prepared upon order.<br>
+							📌 We also provide all types of marble upon request.<br>
+							For more information, contact us! 😊</p>
+					</li>
+				</ul>
+			</div>
 		</div>
 
 
@@ -97,6 +315,24 @@
 				type: 'carousel',
 				autoplay: 2000,
 				perView: 4
+			}).mount();
+
+			new Glide('.glide2', {
+				type: 'carousel',
+				autoplay: 2000,
+				perView: 4
+			}).mount();
+
+			new Glide('.glide3', {
+				type: 'carousel',
+				autoplay: 2000,
+				perView: 4
+			}).mount();
+
+			new Glide('.glide4', {
+				type: 'carousel',
+				autoplay: 2000,
+				perView: 2
 			}).mount();
 		</script>
 
